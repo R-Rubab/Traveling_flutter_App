@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../constcolor/colors.dart';
 
 class TitleName extends StatelessWidget {
-  final name;
+  final String name;
   const TitleName({super.key, required this.name});
 
   @override
@@ -15,7 +15,7 @@ class TitleName extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
-            '$name',
+            name,
             style: style.copyWith(fontSize: 26),
           ),
           GestureDetector(
