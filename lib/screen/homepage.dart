@@ -4,6 +4,7 @@ import 'package:flutter_application_2/screen/widgets/hotels.dart';
 import 'package:flutter_application_2/screen/widgets/title_name.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../Routes_utils/routes_name.dart';
 import '../constcolor/colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       },
       child: AnimatedContainer(
         curve: Curves.fastOutSlowIn,
-        duration: const Duration(seconds: 2),
+        duration: const Duration(seconds: 3),
         child: CircleAvatar(
           foregroundColor: const Color.fromARGB(255, 29, 82, 2),
           backgroundColor: selectedIcons == index
@@ -71,15 +72,17 @@ class _HomePageState extends State<HomePage> {
                     .toList(),
               ),
               Column(
-                children: const <Widget>[
+                children: <Widget>[
                   TitleName(
                     name: 'Top Destinations',
+                    onpress: RouteName.destinationScreen,
                   ),
-                  Destination1(),
+                  const Destination1(),
                   TitleName(
                     name: 'Exclusive Hotels',
+                    onpress: RouteName.destinationScreen,
                   ),
-                  Hotels()
+                  const Hotels()
                 ],
               )
             ],

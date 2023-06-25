@@ -4,7 +4,8 @@ import '../../constcolor/colors.dart';
 
 class TitleName extends StatelessWidget {
   final String name;
-  const TitleName({super.key, required this.name});
+  var onpress;
+  TitleName({super.key, required this.name, required this.onpress});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +20,18 @@ class TitleName extends StatelessWidget {
             style: style.copyWith(fontSize: 26),
           ),
           GestureDetector(
-            onTap: () {
-              // print('object');
-            },
-            child: Text(
-              'See All',
-              style: style.copyWith(
-                  fontSize: 18, color: Theme.of(context).primaryColor),
+            // onTap: () => Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (context) => const DestinationScreen(),
+            //     )),
+            child: InkWell(
+              onTap: () => Navigator.pushNamed(context, onpress),
+              child: Text(
+                'See All',
+                style: style.copyWith(
+                    fontSize: 18, color: Theme.of(context).primaryColor),
+              ),
             ),
           )
         ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/screen/destination.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../constcolor/colors.dart';
@@ -13,11 +12,11 @@ class Destination1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const DestinationScreen(),
-          )),
+      // onTap: () => Navigator.push(
+      //     context,
+      //     MaterialPageRoute(
+      //       builder: (context) => const DestinationScreen(),
+      //     )),
       child: SizedBox(
         // color: const Color.fromARGB(255, 244, 218, 125),
         width: double.infinity,
